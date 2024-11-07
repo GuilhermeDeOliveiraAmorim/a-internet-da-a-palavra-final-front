@@ -11,7 +11,7 @@ export interface PresentersRepository {
   displaysListQuestions(
     input: DisplaysListQuestionsInputDTO
   ): Promise<DisplaysListQuestionsOutputDTO>;
-  showResultQuestionOption(
+  showResultQuestion(
     input: ShowResultQuestionInputDTO
   ): Promise<ShowResultQuestionOutputDTO>;
 }

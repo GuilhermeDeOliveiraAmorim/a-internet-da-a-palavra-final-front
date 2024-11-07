@@ -56,7 +56,7 @@ export class QuestionGateway implements QuestionRepository {
   ): Promise<DeleteQuestionOutputDTO> {
     try {
       const output = await this.http.delete<DeleteQuestionOutputDTO>(
-        `${apiRoutes.deleteQuestion}?Question_id=${input.question_id}`
+        `${apiRoutes.deleteQuestion}?question_id=${input.question_id}`
       );
 
       return output.data;
@@ -69,10 +69,11 @@ export class QuestionGateway implements QuestionRepository {
     input: VoteQuestionInputDTO
   ): Promise<VoteQuestionOutputDTO> {
     try {
-      const output = await this.http.patch<VoteQuestionOutputDTO>(
-        apiRoutes.voteQuestion,
-        input
+      const output = await this.http.post<VoteQuestionOutputDTO>(
+        `${apiRoutes.voteQuestion}?question_id=${input.question_id}&option_id=${input.option_id}`
       );
+
+      console.log("output", output);
 
       return output.data;
     } catch (error) {

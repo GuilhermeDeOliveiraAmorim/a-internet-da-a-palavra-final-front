@@ -6,7 +6,7 @@ export const http = axios.create({
 
 http.interceptors.request.use(
   (config) => {
-    const publicRoutes = ["/signup", "/login"];
+    const publicRoutes = ["/signup", "/login", "/"];
 
     const isPublicRoute = publicRoutes.some((route) =>
       config.url?.includes(route)

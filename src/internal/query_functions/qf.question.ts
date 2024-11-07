@@ -70,6 +70,8 @@ export const voteQuestion = async (
 
     const response = await voteQuestionUseCase.execute(input);
 
+    console.log("response", response);
+
     return response;
   } catch (error) {
     throw error;

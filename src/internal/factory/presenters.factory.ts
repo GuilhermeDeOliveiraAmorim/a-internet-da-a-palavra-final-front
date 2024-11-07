@@ -1,6 +1,6 @@
 import { PresentersGateway } from "../gateway/presenters.gateway";
 import { DisplaysListQuestionsUseCase } from "../presenters/displays_list_questions";
-import { ShowResultQuestionOptionUseCase } from "../presenters/show_result_question";
+import { ShowResultQuestionUseCase } from "../presenters/show_result_question";
 import { http } from "../util/http";
 
 export class PresentersFactory {
@@ -10,7 +10,7 @@ export class PresentersFactory {
     return new DisplaysListQuestionsUseCase(this.presentersGateway);
   }
 
-  showResultQuestionOptionUseCase() {
-    return new ShowResultQuestionOptionUseCase(this.presentersGateway);
+  showResultQuestionUseCase() {
+    return new ShowResultQuestionUseCase(this.presentersGateway);
   }
 }

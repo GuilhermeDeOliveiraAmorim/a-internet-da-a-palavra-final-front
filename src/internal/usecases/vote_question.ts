@@ -2,7 +2,10 @@ import axios from "axios";
 import { QuestionRepository } from "../repository/question.repository";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export type VoteQuestionInputDTO = {};
+export type VoteQuestionInputDTO = {
+  question_id: string;
+  option_id: string;
+};
 
 export type VoteQuestionOutputDTO = {
   success_message: string;

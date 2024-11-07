@@ -28,12 +28,12 @@ export class PresentersGateway implements PresentersRepository {
     }
   }
 
-  async showResultQuestionOption(
+  async showResultQuestion(
     input: ShowResultQuestionInputDTO
   ): Promise<ShowResultQuestionOutputDTO> {
     try {
       const output = await this.http.get<ShowResultQuestionOutputDTO>(
-        `${apiRoutes.showResultQuestionOption}?question_id=${input.question_id}`
+        `${apiRoutes.showResultQuestion}?question_id=${input.question_id}`
       );
 
       return output.data;

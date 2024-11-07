@@ -13,10 +13,10 @@ export const displaysListQuestions = async (
 ): Promise<DisplaysListQuestionsOutputDTO> => {
   try {
     const presentersFactory = new PresentersFactory();
-    const getTotalExpensesForPeriodUseCase =
+    const displaysListQuestionsUseCase =
       presentersFactory.displaysListQuestionsUseCase();
 
-    const response = await getTotalExpensesForPeriodUseCase.execute(input);
+    const response = await displaysListQuestionsUseCase.execute(input);
 
     return response;
   } catch (error) {
@@ -24,15 +24,15 @@ export const displaysListQuestions = async (
   }
 };
 
-export const showResultQuestionOption = async (
+export const showResultQuestion = async (
   input: ShowResultQuestionInputDTO
 ): Promise<ShowResultQuestionOutputDTO> => {
   try {
     const presentersFactory = new PresentersFactory();
-    const showResultQuestionOptionUseCase =
-      presentersFactory.showResultQuestionOptionUseCase();
+    const showResultQuestionUseCase =
+      presentersFactory.showResultQuestionUseCase();
 
-    const response = await showResultQuestionOptionUseCase.execute(input);
+    const response = await showResultQuestionUseCase.execute(input);
 
     return response;
   } catch (error) {

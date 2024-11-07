@@ -6,5 +6,5 @@ export const apiRoutes = {
   deleteQuestion: "/questions",
   voteQuestion: "/vote",
   displaysListQuestions: "/questions/list",
-  showResultQuestionOption: "/questions/result",
+  showResultQuestion: "/questions/result",
 };

@@ -20,14 +20,14 @@ export type ShowResultQuestionOutputDTO = {
   options: ShowResultQuestionOption[];
 };
 
-export class ShowResultQuestionOptionUseCase {
+export class ShowResultQuestionUseCase {
   constructor(private PresentersGateway: PresentersRepository) {}
 
   async execute(
     input: ShowResultQuestionInputDTO
   ): Promise<ShowResultQuestionOutputDTO> {
     try {
-      const output = await this.PresentersGateway.showResultQuestionOption(
+      const output = await this.PresentersGateway.showResultQuestion(
         input
       );
       return output;
