@@ -15,14 +15,14 @@ export class Question extends SharedEntity {
   constructor(
     id: string,
     active: boolean,
-    createdAt: Date,
-    updatedAt: Date,
+    created_at: Date,
+    updated_at: Date,
     text: string,
     icon: string,
     options: Option[],
-    deactivatedAt: Date
+    deactivated_at: Date
   ) {
-    super(id, active, createdAt, updatedAt, deactivatedAt);
+    super(id, active, created_at, updated_at, deactivated_at);
     this.text = text;
     this.icon = icon;
     this.options = options;

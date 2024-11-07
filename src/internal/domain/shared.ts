@@ -9,21 +9,21 @@ export interface SharedEntityInterface {
 export class SharedEntity {
   id: string;
   active: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-  deactivatedAt: Date;
+  created_at: Date;
+  updated_at: Date;
+  deactivated_at: Date;
 
   constructor(
     id: string,
     active: boolean,
-    createdAt: Date,
-    updatedAt: Date,
-    deactivatedAt: Date
+    created_at: Date,
+    updated_at: Date,
+    deactivated_at: Date
   ) {
     this.id = id;
     this.active = active;
-    this.createdAt = createdAt;
-    this.updatedAt = updatedAt;
-    this.deactivatedAt = deactivatedAt;
+    this.created_at = created_at;
+    this.updated_at = updated_at;
+    this.deactivated_at = deactivated_at;
   }
 }

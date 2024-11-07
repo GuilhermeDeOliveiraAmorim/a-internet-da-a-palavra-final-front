@@ -1,7 +1,7 @@
 import { SharedEntity, SharedEntityInterface } from "./shared";
 
 export interface OptionInterface extends SharedEntityInterface {
-  questionId: string;
+  question_id: string;
   text: string;
   icon: string;
   description: string;
@@ -9,7 +9,7 @@ export interface OptionInterface extends SharedEntityInterface {
 }
 
 export class Option extends SharedEntity {
-  questionId: string;
+  question_id: string;
   text: string;
   icon: string;
   description: string;
@@ -20,18 +20,19 @@ export class Option extends SharedEntity {
     active: boolean,
     createdAt: Date,
     updatedAt: Date,
-    questionId: string,
     text: string,
     icon: string,
     description: string,
+    question_id: string,
     votes: number,
     deactivatedAt: Date
   ) {
     super(id, active, createdAt, updatedAt, deactivatedAt);
-    this.questionId = questionId;
+    this.question_id = question_id;
     this.text = text;
     this.icon = icon;
     this.description = description;
+    this.question_id = question_id;
     this.votes = votes;
   }
 }
